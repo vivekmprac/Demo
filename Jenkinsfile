@@ -2,11 +2,11 @@ pipeline {
     agent any
     stages {
         stage('build') {
-            when{
-                buildingTag()
+            when {
+                changelog '.*some_text.*'
             }
             steps {
-                echo "hello world building tag"
+                echo "hello world change log"
             }
         }
     }
